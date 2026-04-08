@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f8ff;
+  text-align: center;
+  padding: 20px;
+}
+
+.hidden { display: none; }
+
+.page {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.buttons button, button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:hover, button:hover {
+  background: #45a049;
+}
+
+.chat-window {
+  border: 2px solid #4caf50;
+  padding: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+.chat-bubble {
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin: 5px;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.chat-bubble.ai {
+  background: #c8e6c9;
+  align-self: flex-start;
+}
+
+.chat-bubble.user {
+  background: #ffccbc;
+  align-self: flex-end;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 20px;
+  background: #4caf50;
+  border-radius: 10px;
+  width: 0%;
+}
