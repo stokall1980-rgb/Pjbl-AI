@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBuddy - AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dashboard -->
+  <div id="dashboard" class="page">
+    <h2>Halo! Siap belajar hari ini?</h2>
+    <img src="avatar_ai.png" alt="AI Buddy" class="avatar">
+    <div class="buttons">
+      <button onclick="showPage('chat')">Chat AI</button>
+      <button onclick="showPage('quiz')">Quiz Interaktif</button>
+      <button onclick="showPage('planner')">Study Planner</button>
+    </div>
+  </div>
+
+  <!-- Chat AI -->
+  <div id="chat" class="page hidden">
+    <h3>Chat dengan AI</h3>
+    <div id="chat-window" class="chat-window">
+      <div class="chat-bubble ai">Hai! Apa yang mau kamu pelajari hari ini?</div>
+    </div>
+    <input type="text" id="user-input" placeholder="Ketik pertanyaanmu..." />
+    <button onclick="sendMessage()">Kirim</button>
+    <button onclick="showPage('dashboard')">Kembali</button>
+  </div>
+
+  <!-- Quiz Interaktif -->
+  <div id="quiz" class="page hidden">
+    <h3>Quiz: Biologi Kelas 10</h3>
+    <p id="question">1. Proses fotosintesis terjadi di…?</p>
+    <ul>
+      <li><button onclick="checkAnswer(this)">Daun</button></li>
+      <li><button onclick="checkAnswer(this)">Akar</button></li>
+      <li><button onclick="checkAnswer(this)">Bunga</button></li>
+      <li><button onclick="checkAnswer(this)">Batang</button></li>
+    </ul>
+    <div class="score">Skor: <span id="score">0</span></div>
+    <button onclick="showPage('dashboard')">Kembali</button>
+  </div>
+
+  <!-- Study Planner -->
+  <div id="planner" class="page hidden">
+    <h3>Study Planner</h3>
+    <div class="calendar">
+      <p>Senin: Matematika, Biologi</p>
+      <p>Selasa: Bahasa Inggris, Fisika</p>
+      <!-- Tambahkan jadwal harian -->
+    </div>
+    <div class="progress-bar">
+      <div id="progress" class="progress" style="width: 50%"></div>
+    </div>
+    <div class="badges">🏆 Level 2 Achieved!</div>
+    <button onclick="showPage('dashboard')">Kembali</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
